@@ -33,6 +33,10 @@ h1 {
   margin: 1.25rem 0;
 }
 
+.accordion__item {
+  border-top: 0.1rem solid #a8a8a8;
+}
+
 input {
   display: none;
 }
