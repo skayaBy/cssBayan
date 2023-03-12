@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  box-sizing: border-box; 
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5;
+  color: #0000ff;
+  background-color: #f5f5dc;
+}
+
+h1 {
+  color: #000000;
+  margin: 1.25rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 60%; 
+  margin: 0 auto;
+}
+
+.accordion {
+  margin: 1.25rem 0;
+}
+
+.accordion__item {
+  border-top: 0.1rem solid #a8a8a8;
+}
+
+input {
+  display: none;
+}
+
+label {
+	cursor: pointer;
+	display: block;
+	padding: 1rem 1.25rem;
+  font-weight: 700;
+	transition: .5s;
+}
+
+.accordion:hover {
+  color: #000000;
+}
+
+.mem__title{
+  display: flex;
+  justify-content: space-between;
+}
+
+i {
+  visibility: hidden;
+}
+
+.accordion:hover i  {
+  visibility: visible;
+  color:#000000;
+}
+
+input:checked + label {
+  color:#000000;
+}
+
+input:checked + label i {
+  transition: transform .5s;
+  transform: rotate(45deg);
+}
+
+.mem__image {
+	margin: 0 auto;
+	height: 0;
+	padding: 0 1.875rem;
+	transition: .5s;
+	overflow: hidden;
+}
+
+  input:checked + label .mem__image {
+	height: 40vh;
+  display: flex;
+  justify-content: center;
+}
+
+
+@media (hover: hover) {
+  label:hover .mem__image {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+  }   
+  label:hover i {
+    transform: rotate(45deg);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    max-width: 75%; 
+  }
+  label {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    max-width: 85%; 
+  }
+  label {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .mem__image img {
+      width: 85vw;
+      height: 100%;
+    }
+  input:checked + label .mem__image {
+      height: 100%;
+    }
+}
