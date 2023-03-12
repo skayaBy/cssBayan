@@ -21,10 +21,6 @@ h1 {
   margin: 1.25rem;
 }
 
-label {
-  cursor: pointer;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -33,32 +29,61 @@ label {
   margin: 0 auto;
 }
 
-.accordion__item {
-  border-top: 0.1rem solid #6d6d6d;
-  padding-top: 1.25rem;
+.accordion {
+  margin: 1.25rem 0;
 }
 
-
-.mem__image {
-  display: flex;
-  justify-content: center;
-  margin: 1.25rem;
-  transition: 1s;
-}
-
-.item__input {
+input {
   display: none;
 }
 
-.item__input:checked ~ .mem__image {
-  height: 0;
-  opacity: 0;
+label {
+	cursor: pointer;
+	display: block;
+	padding: 1rem 1.25rem;
+  font-weight: 700;
+	transition: .5s;
 }
 
-.mem__title {
-  transition: .3s;
+label:hover {
+  color: #000000;
 }
 
-.mem__title:hover{
-   color: #000000;
- }
+.mem__title{
+  display: flex;
+  justify-content: space-between;
+}
+
+i {
+  /*display: none;*/
+  visibility: hidden;
+}
+
+.accordion:hover i  {
+  visibility: visible;
+  color:#000000;
+}
+
+input:checked + label {
+  color:#000000;
+}
+
+input:checked + label i {
+  transition: transform .5s;
+  transform: rotate(45deg);
+}
+
+.mem__image {
+	margin: 0 auto;
+	height: 0;
+	padding: 0 1.875rem;
+	transition: .5s;
+	overflow: hidden;
+}
+
+input:checked + label + .mem__image {
+	height: auto;
+  display: flex;
+  justify-content: center;
+}
+
