@@ -86,7 +86,7 @@ input:checked + label i {
 }
 
 input:checked + label + .mem__image {
-	height: auto;
+	height: 50vh;
   display: flex;
   justify-content: center;
 }
