@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5;
+  color: #0000ff;
+  background-color: #f5f5dc;
+}
+
+h1 {
+  color: #000000;
+  margin: 1.25rem;
+}
+
+label {
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 70%; 
+  margin: 0 auto;
+}
+
+.accordion__item {
+  border-top: 0.1rem solid #6d6d6d;
+  padding-top: 1.25rem;
+}
+
+
+.mem__image {
+  display: flex;
+  justify-content: center;
+  margin: 1.25rem;
+  transition: 1s;
+}
+
+.item__input {
+  display: none;
+}
+
+.item__input:checked ~ .mem__image {
+  height: 0;
+  opacity: 0;
+}
+
+.mem__title {
+  transition: .3s;
+}
+
+.mem__title:hover{
+   color: #000000;
+ }
