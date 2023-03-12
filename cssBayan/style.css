@@ -107,7 +107,7 @@ input:checked + label i {
   .wrapper {
     max-width: 75%; 
   }
-  body {
+  label {
     font-size: 1.25em;
   }
 }
@@ -116,7 +116,7 @@ input:checked + label i {
   .wrapper {
     max-width: 85%; 
   }
-  body {
+  label {
     font-size: 1em;
   }
 }
